@@ -2,15 +2,17 @@
 
 # go to the dekstop and delete the stuff
 cd ~/Desktop
-rm *.png
-rm *.jpg
+rm *.jpg 2>/dev/null && t=0 || t=1
+rm *.png 2>/dev/null && t=0 || t=1
 
 # print out the status
-status=$?
- 
-if test $status -eq 0
+RETURN=$?
+
+if [ $RETURN -eq 0 ];
 then
-	echo "Files deleted!"
+  echo "The script was executed successfuly"
+  exit 0
 else
-	echo "Failed!"
-fi
+  echo "The script was NOT executed successfuly and returned the code $RETURN"
+  exit $RETURN
+fi 
