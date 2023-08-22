@@ -1,5 +1,7 @@
 ## Handy bits and bobs - snippets of code
 
+## None of these are mine, all credit to the original owners. They're just some neat bits I've found in my travels.
+
 ## Add loading spinner
 # NOTE: If you want to slow it down, put a sleep command inside the loop after the `printf`
 i=1
