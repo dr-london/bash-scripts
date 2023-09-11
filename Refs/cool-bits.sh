@@ -1,3 +1,4 @@
+#!/bin/bash
 ## Handy bits and bobs - snippets of code
 
 ## None of these are mine, all credit to the original owners. They're just some neat bits I've found in my travels.
@@ -10,6 +11,7 @@ echo -n ' '
 while true
 do
     printf "\b${sp:i++%${#sp}:1}"
+    sleep 0.125
 done
 
 
@@ -23,7 +25,7 @@ done
 
 ## Progress bar FULL:
 
-#!/bin/bash
+
 # 1. Create ProgressBar function
 # 1.1 Input is currentState($1) and totalState($2)
 function ProgressBar {
