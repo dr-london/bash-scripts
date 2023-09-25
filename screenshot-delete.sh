@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # go to the dekstop and delete the stuff
-echo "---> moving to desktop"
+echo "---> moving to desktop..."
 cd ~/Desktop
 
 echo "---> deleting files..."
@@ -13,7 +13,7 @@ RETURN=$?
 
 if [ $RETURN -eq 0 ];
 then
-  echo "---> Done!"
+  echo "---> done!"
   exit 0
 else
   echo "*** Error: $RETURN"
