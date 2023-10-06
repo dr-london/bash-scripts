@@ -17,8 +17,8 @@ if [ $? -eq 0 ]; then
     # securely delete the private key
     rm ~/.ssh/"$key_name"
     
-    echo "SSH key generation and storage in 1Password completed successfully."
+    echo "---> ssh key generated and stored in 1Password successfully"
 else
-    echo "SSH key generation failed."
+    echo "---> ssh key generation failed"
     exit 1
 fi
