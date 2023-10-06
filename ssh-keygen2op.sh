@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # specify the name for the key
-key_name="$(date +"%Y-%m-%d") ed255 key"
+key_name="$(date +"%Y-%m-%d") ssh-ed25519 key"
 
 # generate the SSH key pair
 ssh-keygen -t ed25519 -f ~/.ssh/"$key_name"
