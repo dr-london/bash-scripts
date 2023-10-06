@@ -1,16 +1,7 @@
 #!/bin/bash
 
-# check if 1Password CLI tool is installed
-# if ! command -v op &> /dev/null; then
-#    echo "1Password CLI tool is not installed. Please install it first."
-#    exit 1
-# fi
-
 # specify the name for the key
 key_name="$(date +"%Y-%m-%d") ed255 key"
-
-# specify the vault
-# vault_name="Personal"
 
 # generate the SSH key pair
 ssh-keygen -t ed25519 -f ~/.ssh/"$key_name"
