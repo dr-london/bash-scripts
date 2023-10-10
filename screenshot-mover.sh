@@ -5,15 +5,22 @@ currentdate=$(date +"%Y-%m-%d")
 
 # create the new directory named after the date
 cd ~/Desktop/Archive
-mkdir "Screenshots $currentdate"
-echo "---> creating folder $currentdate in $PWD..."
+mkdir "Screenshots $currentdate" 2>/dev/null
+
+# check if there's already a dir there
+if [ $? -eq 0 ]
+then
+  echo "---> creating folder $currentdate in $PWD..."
+else
+  echo "---> dir already created, moving on..."
+fi
+
 
 # move all the junk off the desktop and into the new folder
-cd ~/Desktop
-mv *.png Archive/$currentdate 2>/dev/null && t=0 || t=1 ## mv cmd to be fixed here
-mv *.jpg Archive/$currentdate 2>/dev/null && t=0 || t=1
-mv *.jpeg Archive/$currentdate 2>/dev/null && t=0 || t=1
 echo "----> moving files..."
+cd ~/Desktop
+mv *.png ~/Desktop/Archive/"Screenshots $currentdate" 2>/dev/null
+mv *.jpg ~/Desktop/Archive/"Screenshots $currentdate" 2>/dev/null
 
 # print out the status
 RETURN=$?
@@ -25,7 +32,4 @@ then
 else
   echo "*** Error: $RETURN"
   exit $RETURN
-fi 
-
-## Need to fix the status, it sucks
-
+fi
