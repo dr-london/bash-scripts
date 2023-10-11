@@ -3,6 +3,7 @@
 # Clean mac device setup script
 # dr-london@github 11-2-2023
 
+### Coding tools
 
 # install brew unattended
 NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -39,3 +40,16 @@ cd fonts
 cd ..
 rm -rf fonts
 
+##### Applications
+
+# vs code
+cd ~/Applications
+code .
+
+if [ $? -eq 0 ];
+then 
+  echo "--> vs code installed, skipping"
+else
+  brew install --cask visual-studio-code
+  echo "---> installing vs code..."
+fi
