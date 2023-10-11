@@ -12,14 +12,24 @@ NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Ho
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" --unattended
 
 # install brew packages
+echo "--> installing iterm2..."
 brew install --cask iterm2
+echo "installing amethyst..."
 brew install --cask amethyst
+echo "--> installing 1password cli..."
 brew install --cask 1password
+echo "--> installing figlet..."
 brew install figlet
+echo "--> installing exercism..."
 brew install exercism
+echo "--> installing python3..."
 brew install python3
+echo "--> installing tldr..."
 brew install tldr
+echo "--> installing github cli..."
 brew install gh
+echo "---> installing vs code..."
+brew install --cask visual-studio-code
 
 ## WIP
 # create folder for code
@@ -41,15 +51,3 @@ cd ..
 rm -rf fonts
 
 ##### Applications
-
-# vs code
-cd ~/Applications
-code .
-
-if [ $? -eq 0 ];
-then 
-  echo "--> vs code installed, skipping"
-else
-  brew install --cask visual-studio-code
-  echo "---> installing vs code..."
-fi
