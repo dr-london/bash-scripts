@@ -1,8 +1,7 @@
 #!/bin/bash
 
-# Attempting to make a script that will install all the fun things
-# that I usually have to manually install. I inevitably miss something
-# so I'm going to script it all >:)
+# Clean mac device setup script
+# dr-london@github 11-2-2023
 
 
 # install brew unattended
@@ -12,7 +11,31 @@ NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Ho
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" --unattended
 
 # install brew packages
-brew install gh
+brew install --cask iterm2
+brew install --cask amethyst
 brew install --cask 1password
+brew install figlet
+brew install exercism
+brew install python3
+brew install tldr
+brew install gh
 
 ## WIP
+# create folder for code
+cd ~/Desktop
+mkdir Code && git init 2>/dev/null
+
+# make Archive folder (used for the `screenshot-mover` script)
+mkdir Archive
+
+# install some fonts
+# clone
+cd ~/Desktop/Code
+git clone https://github.com/powerline/fonts.git --depth=1
+# install
+cd fonts
+./install.sh
+# clean-up a bit
+cd ..
+rm -rf fonts
+

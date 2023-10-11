@@ -1,7 +1,7 @@
 #!/bin/bash
 ## Handy bits and bobs - snippets of code
 
-## None of these are mine, all credit to the original owners. They're just some neat bits I've found in my travels.
+## None of these are mine, all credit to the original owners/creators/contributors. They're just some neat bits I've found in my travels.
 
 ## Add loading spinner
 # NOTE: If you want to slow it down, put a sleep command inside the loop after the `printf`
@@ -57,3 +57,36 @@ do
     ProgressBar ${number} ${_end}
 done
 printf '\nFinished!\n'
+
+## Another spinner which can be attached
+spinner()
+{
+    local pid=$!
+    local delay=0.75
+    local spinstr='|/-\'
+    while [ "$(ps a | awk '{print $1}' | grep $pid)" ]; do
+        local temp=${spinstr#?}
+        printf " [%c]  " "$spinstr"
+        local spinstr=$temp${spinstr%"$temp"}
+        sleep $delay
+        printf "\b\b\b\b\b\b"
+    done
+    printf "    \b\b\b\b"
+}
+
+# usage:
+(a_long_running_task) &
+spinner
+
+## Loading bar:
+
+sleep 20 & PID=$! #simulate a long process
+
+echo "----> running..."
+printf "["
+# While process is running...
+while kill -0 $PID 2> /dev/null; do 
+    printf  "▓"
+    sleep 1
+done
+printf "] done!"
