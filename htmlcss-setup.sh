@@ -4,6 +4,7 @@
 # contains only the most basic structure, will be appended as needed.
 
 # create folders
+echo "## Making folders..."
 cd ~/Desktop/Code
 mkdir new-project
 cd New-Project
@@ -12,6 +13,7 @@ cd resources
 mkdir css
 
 # create files
+echo "## Making files..."
 cd ~/Desktop/Code/new-project
 touch index.html
 cd ~/Desktop/Code/new-project/resources/css
