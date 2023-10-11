@@ -11,24 +11,27 @@ NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Ho
 # install zsh unattended
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" --unattended
 
-# install brew packages
-echo "--> installing iterm2..."
+# install brew packages 
+# AKA THE BREWHOUSE
+# SLAMMIN BREWSKIS
+
+echo -e "\n--> installing iterm2...\n"
 brew install --cask iterm2
-echo "installing amethyst..."
+echo -e "\n-->installing amethyst...\n"
 brew install --cask amethyst
-echo "--> installing 1password cli..."
+echo -e "\n--> installing 1password cli...\n"
 brew install --cask 1password
-echo "--> installing figlet..."
+echo -e "\n--> installing figlet...\n"
 brew install figlet
-echo "--> installing exercism..."
+echo -e "\n--> installing exercism...\n"
 brew install exercism
-echo "--> installing python3..."
+echo -e "\n--> installing python3...\n"
 brew install python3
-echo "--> installing tldr..."
+echo -e "\n--> installing tldr...\n"
 brew install tldr
-echo "--> installing github cli..."
+echo -e "\n--> installing github cli...\n"
 brew install gh
-echo "---> installing vs code..."
+echo -e "\n---> installing vs code...\n"
 brew install --cask visual-studio-code
 
 ## WIP
