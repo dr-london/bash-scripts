@@ -13,7 +13,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 # install brew packages 
 # AKA THE BREWHOUSE
-# SLAMMIN BREWSKIS
+# AKA SLAMMIN BREWSKIS
 
 echo -e "\n--> installing iterm2...\n"
 brew install --cask iterm2
@@ -33,6 +33,8 @@ echo -e "\n--> installing github cli...\n"
 brew install gh
 echo -e "\n---> installing vs code...\n"
 brew install --cask visual-studio-code
+echo -e "\n---> installing tree...\n"
+brew install tree
 
 ## WIP
 # create folder for code
