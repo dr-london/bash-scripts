@@ -15,7 +15,6 @@ else
   echo "---> dir already created, moving on..."
 fi
 
-
 # move all the junk off the desktop and into the new folder
 echo "----> moving files..."
 cd ~/Desktop
