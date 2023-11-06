@@ -23,4 +23,4 @@ Yes, the code is sub-optimal (for now!)
 ### full setup
 As the name suggests, this is a script to automate as much of the 'new mac' or 'fresh wipe' setup as possible.
 
-`Very much a WIP! Also has not been tested. Use at your own risk`
+> Very much a WIP! Also has not been tested. Use at your own risk

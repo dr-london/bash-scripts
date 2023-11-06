@@ -21,7 +21,7 @@ echo -e "\n-->installing amethyst...\n"
 brew install --cask amethyst
 echo -e "\n--> installing 1password cli...\n"
 brew install --cask 1password
-echo -e "\n--> installing figlet...\n"
+echo -e "\n--> installing figlet...\n"tree
 brew install figlet
 echo -e "\n--> installing exercism...\n"
 brew install exercism
@@ -36,13 +36,10 @@ brew install --cask visual-studio-code
 echo -e "\n---> installing tree...\n"
 brew install tree
 
-## WIP
+### Folder structure
 # create folder for code
 cd ~/Desktop
-mkdir Code && git init 2>/dev/null
-
-# make Archive folder (used for the `screenshot-mover` script)
-mkdir Archive
+mkdir Code && cd Code && git init 2>/dev/null
 
 # install some fonts
 # clone
@@ -55,4 +52,15 @@ cd fonts
 cd ..
 rm -rf fonts
 
-##### Applications
+# make Archive folder 
+# (used for the `screenshot-mover` script)
+cd ~/Desktop
+mkdir Archive
+
+### Applications
+
+
+### Other things to add (remove this section once done)
+# Python3, pip, virtualenv
+# EBCLI: https://github.com/aws/aws-elastic-beanstalk-cli-setup
+# Don't forget to add to PATH: echo 'export PATH="/Users/darcy/.ebcli-virtual-env/executables:$PATH"' >> ~/.zshenv && source ~/.zshenv
