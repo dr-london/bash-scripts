@@ -64,3 +64,8 @@ mkdir Archive
 # Python3, pip, virtualenv
 # EBCLI: https://github.com/aws/aws-elastic-beanstalk-cli-setup
 # Don't forget to add to PATH: echo 'export PATH="/Users/darcy/.ebcli-virtual-env/executables:$PATH"' >> ~/.zshenv && source ~/.zshenv
+
+
+## FIX PYTHON
+# Use this to fix the issue with python3 (ffs) -- check version is correct too.
+echo "alias python=/usr/local/bin/python3.12" >> ~/.zshrc
