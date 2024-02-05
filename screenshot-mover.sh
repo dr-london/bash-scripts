@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 
 # grab the current date, save it in a variable
 currentdate=$(date +"%Y-%m-%d")
